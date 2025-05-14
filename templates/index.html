@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Project Submission</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      padding: 40px;
+    }
+
+    form {
+      background-color: #ffffff;
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    select,
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 20px;
+      width: 100%;
+      background-color: #2e86de;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #1b4f72;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <h2>Submit Your Project</h2>
+
+    <label>Student Name:</label>
+    <input type="text" name="student_name" required>
+
+    <label>Course Name:</label>
+    <select name="course_name" required>
+      <option value="Data Science">Data Science</option>
+      <option value="Data Analyst">Data Analyst</option>
+      <option value="Python Fullstack">Python Fullstack</option>
+    </select>
+
+    <label>Topic:</label>
+    <select name="topic_name" required>
+      <option value="Python">Python</option>
+      <option value="Excel">Excel</option>
+      <option value="PowerBI">PowerBI</option>
+      <option value="SQL">SQL</option>
+      <option value="Python Packages">Python Packages</option>
+      <option value="Data Analysis Complete">Data Analysis Complete</option>
+      <option value="ML">ML</option>
+      <option value="DL">DL</option>
+      <option value="NLP">NLP</option>
+      <option value="AI">AI</option>
+    </select>
+
+    <label>Upload Project Folder (zip):</label>
+    <input type="file" name="project_folder" accept=".zip" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>

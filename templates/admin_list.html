@@ -1,0 +1,7 @@
+<h2>All Enrolled Students</h2>
+<a href="/admin/add_student">+ Add Student</a>
+<ul>
+  {% for student in students %}
+    <li><a href="/admin/student/{{ student[0] }}">{{ student[1] }} - {{ student[2] }}</a></li>
+  {% endfor %}
+</ul>

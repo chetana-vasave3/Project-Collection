@@ -1,0 +1,16 @@
+<h2>{{ student[0] }} ({{ student[1] }})</h2>
+<table>
+  <tr><th>Topic</th><th>Submitted</th><th>Download</th></tr>
+  {% for topic, file in submissions %}
+  <tr>
+    <td>{{ topic }}</td>
+    <td>{{ 'Yes' if file else 'No' }}</td>
+    <td>
+      {% if file %}
+        <a href="/download_path_if_any/{{ file }}">Download</a>
+      {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+

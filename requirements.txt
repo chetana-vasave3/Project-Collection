@@ -63,7 +63,6 @@ MarkupSafe==3.0.2
 matplotlib==3.10.1
 mpmath==1.3.0
 mysql-connector-python==9.3.0
-mysqlclient==2.2.7
 narwhals==1.39.1
 networkx==3.5
 nltk==3.9.1
